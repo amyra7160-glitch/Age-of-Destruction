@@ -1,0 +1,17 @@
+'use strict';
+
+// Collision detection functionality for the Age of Destruction game
+
+class Collision {
+    static check(rectA, rectB) {
+        return (
+            rectA.x < rectB.x + rectB.width &&
+            rectA.x + rectA.width > rectB.x &&
+            rectA.y < rectB.y + rectB.height &&
+            rectA.y + rectA.height > rectB.y
+        );
+    }
+}
+
+// Export the Collision class for use in other parts of the game
+module.exports = Collision;
